@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 *,
 *::before,
 *::after {
@@ -70,11 +71,37 @@ select {
 
 
 :root {
-    --font-family: "Lato", sans-serif;
+    --font-family: "lato", sans-serif;
     --second-family: "Roboto", sans-serif;
 }
 
+body {
+    font-family: var(--font-family);
+}
+
 .wrapper {
-    width: 1280px;
+    max-width: 1280px;
     margin: 0  auto;
+}
+
+.checkbox {
+    border: 1px solid #797b86;
+    border-radius: 2px;
+    width: 20px;
+    height: 20px;
+    box-shadow: inset 2px 2px 1px rgba(0, 0, 0, 0.08);
+    background: #fff;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: solid 1px #0069b4;
+    padding: 14px 40px;
+    width: 365px;
+    height: 54px;
+    background: #0069b4;
+    color: #fff;
 }

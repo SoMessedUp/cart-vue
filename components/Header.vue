@@ -17,9 +17,6 @@
 </template>
 
 <style scoped>
-.block {
-  background-color: lightblue;
-}
 
 .header {
     font-family: var(--font-family);
