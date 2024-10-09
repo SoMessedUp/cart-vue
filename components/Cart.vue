@@ -10,9 +10,11 @@
                     </div>
                     <div class="cart__heading-button">Очистить корзину</div>
                 </div>
-                <Cart-card />
-                <Cart-card />
-                <Cart-card />
+                <CartCard
+                    v-for="(item, index) in cartItems"
+                    :key="index"
+                    :item="item"
+                />
                 <div class="cart__additionals">
                     <input type="checkbox" name="installation" class="card__additionals-checkbox checkbox">
                     <div class="card__additionals-img">
@@ -63,6 +65,53 @@
     </div>
 </div>
 </template>
+
+<script>
+import CartCard from './Cart-card.vue';
+
+import G2Himg from '~/assets/img/cards/G2H.png';
+import BXCimg from '~/assets/img/cards/BXC.png';
+import GHNimg from '~/assets/img/cards/GHN.png';
+
+export default {
+  components: {
+    CartCard,
+  },
+  data() {
+    return {
+      cartItems: [
+        {
+          id: 1,
+          name: 'Вытяжное устройство G2H',
+          info: '12-72/168 м3/ч / гидрорегулируемый расход / от датчика присутствия',
+          article: 'G2H1065',
+          price: '12644р',
+          quantity: 1,
+          imgSrc: G2Himg,
+        },
+        {
+          id: 2,
+          name: 'Вытяжное устройство BXC',
+          info: '12-72/168 м3/ч / гидрорегулируемый расход / от датчика присутствия',
+          article: 'G2H1065',
+          price: '12644р',
+          quantity: 1,
+          imgSrc: BXCimg,
+        },
+        {
+          id: 3,
+          name: 'Вытяжное устройство GHN',
+          info: '12-72/168 м3/ч / гидрорегулируемый расход / от датчика присутствия',
+          article: 'G2H1065',
+          price: '12644р',
+          quantity: 1,
+          imgSrc: GHNimg,
+        },
+      ],
+    };
+  },
+};
+</script>
 
 <style scoped>
 .cart-page {

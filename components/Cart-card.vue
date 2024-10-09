@@ -1,23 +1,34 @@
 <template>
     <div class="cart-card">
-        <img src="~/assets/img/cards/G2H.png" alt="" class="cart-card__img">
+        <img :src="item.imgSrc" alt="" class="cart-card__img">
         <div class="cart-card__text">
-            <div class="cart-card__name">Вытяжное устройство G2H</div>
-            <div class="cart-card__info">12-72/168 м3/ч / гидрорегулируемый расход /<br> от датчика присутствия</div>
-            <div class="cart-card__article">Артикул: G2H1065</div>
+            <div class="cart-card__name">{{ item.name }}</div>
+            <div class="cart-card__info">{{ item.info }}</div>
+            <div class="cart-card__article">Артикул: {{ item.article }}</div>
         </div>
         <div class="cart-card__quantity">
             <div class="cart-card__quantity-buttons">
                 <div class="cart-card__quantity-remove cart-card__quantity-button">-</div>
-                <div class="cart-card__quantity-number cart-card__quantity-button">1</div>
+                <div class="cart-card__quantity-number cart-card__quantity-button">{{ item.quantity }}</div>
                 <div class="cart-card__quantity-add cart-card__quantity-button">+</div>
             </div>
-            <div class="cart-card__quantity-price"></div>
+            <div class="cart-card__quantity-price">{{ item.price }} / шт.</div>
         </div>
-        <div class="cart-card__sum">12644р</div>
+        <div class="cart-card__sum">{{ item.price }}</div>
         <div class="cart-card__button-delete">×</div>
     </div>
 </template>
+
+<script>
+export default {
+  props: {
+    item: {
+      type: Object,
+      required: true,
+    },
+  },
+};
+</script>
 
 <style scoped>
 .cart-card {
