@@ -56,8 +56,8 @@
                     <div class="cart__total-sum-text">Стоимость товаров</div>
                     <div class="cart__total-sum-value"> 50 576р</div>
                 </div>
-                <button class="cart__total-oder-button button">Оформить заказ</button>
-                <button class="cart__total-oder cart__total-order-fast-button button">Купить в 1 клик</button>
+                <button class="cart__total-order-button button">Оформить заказ</button>
+                <button class="cart__total-order cart__total-order-fast-button button">Купить в 1 клик</button>
             </div>
         </div>
     </div>
@@ -65,6 +65,10 @@
 </template>
 
 <style scoped>
+.cart-page {
+    margin-bottom: 45px;
+}
+
 .cart {
     display: flex;
     justify-content: space-between;
@@ -203,11 +207,11 @@
     color: #1f2432;
 }
 
-.cart__total-oder-button {
+.cart__total-order-button {
     margin: 13px 0;
 }
 
-.cart__total-oder-button {
+.cart__total-order-fast-button {
     background: #fff;
     color: #0069b4;
 }
